@@ -1,4 +1,3 @@
 #Utility Program
 
-This is the gneric module with utilities
-
+Some utility functions. However this is created primarily for CI experiments.
