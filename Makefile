@@ -1,12 +1,12 @@
 #Make file for CI program experiments
 
 all:
-	gcc -c -Wall -lstdc++ -Werror -fpic utility.cpp -o utility.o
-	gcc -c -Wall -lstdc++ -Werror -fpic explore.cpp -o explore.o
-	gcc -lstdc++ -shared -o libutility.so utility.o
+	gcc -ggdb -c -Wall -lstdc++ -Werror -fpic utility.cpp -o utility.o
+	gcc -ggdb -c -Wall -lstdc++ -Werror -fpic explore.cpp -o explore.o
+	gcc -ggdb -lstdc++ -shared -o libutility.so utility.o
 
 ut:
-	gcc utility.cpp explore.cpp test.cpp -lstdc++ -o utility.exe
+	gcc  utility.cpp explore.cpp test.cpp -ggdb -lstdc++ -o utility.exe
 
 clean:
 	rm *.o *.so *.exe
