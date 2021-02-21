@@ -1,7 +1,7 @@
 #Make file for CI program experiments
 
-C_OPTIONS = -Wall -lstdc++ -Werror -fpic -ggdb
-B_OPTIONS = -ggdb -lstdc++ -shared
+C_OPTIONS = -Wall -lstdc++ -Werror -fPIC 
+B_OPTIONS = -lstdc++ -fPIC -shared
 
 all:
 	gcc -c $(OPTIONS) utility.cpp -o utility.o
